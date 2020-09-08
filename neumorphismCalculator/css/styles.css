@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  color: #0e0e0e;
+  background: #dadada;
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  font-family: "Bebas Neue", cursive, Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* base de la calculadora */
+#calculator {
+  height: 690px;
+  width: 450px;
+  max-width: 100vw;
+  border-radius: 25px;
+  background: #dadada;
+  box-shadow: -20px -20px 51px #b9b9b9, 20px 20px 51px #fbfbfb;
+  padding: 20px 15px;
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* pantalla */
+#screen {
+  cursor: not-allowed;
+  max-width: 100%;
+  height: 85px;
+  border-width: 0px;
+  border-radius: 25px;
+  background: #dadada;
+  box-shadow: inset -20px -20px 51px #b9b9b9, inset 20px 20px 51px #fbfbfb;
+  padding-left: 3%;
+  margin-top: 4%;
+}
+
+/* bloque de botones */
+#buttons {
+  font-family: inherit;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.flex-item {
+  border-width: 0;
+  font-weight: 600;
+  font-size: 2.5em;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  justify-self: center;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background: #dadada;
+  box-shadow: -20px -20px 51px #b9b9b9, 20px 20px 51px #fbfbfb;
+}
+
+.flex-item:first-child,
+.flex-item:last-child {
+  color: #fa470d;
+}
+
+input,
+input:hover,
+input:active {
+  border-width: 0;
+  font-size: 2em;
+  text-align: left;
+}
